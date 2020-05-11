@@ -1,10 +1,15 @@
 <template>
-  <div class="coming">
-    <div class="images">
-      <img src="@/assets/name-plus-cycle.svg" style="width: 100%">
-    </div>
-    <div class="message">
-      $ system reboot in progress...<br>$ system will be available in {{ counter.days }} days {{ counter.hours }} hours {{ counter.minutes }} minutes {{ counter.seconds }} seconds
+  <div style="height: 100%;">
+    <div class="coming"></div>
+    <div class="overlay">
+      <div class="line">
+        <div class="term-init">$</div>
+        <div>system reboot in progress...</div>
+      </div>
+      <div class="line">
+        <div class="term-init">$</div>
+        <div>system will be available in {{ counter.days }} days {{ counter.hours }} hours {{ counter.minutes }} minutes {{ counter.seconds }} seconds</div>
+      </div>
     </div>
   </div>
 </template>
@@ -25,8 +30,7 @@ export default {
   methods: {
     countdown () {
       let d = new Date()
-      let releaseDate = new Date('2020-06-15')
-      releaseDate.setHours(24)
+      let releaseDate = new Date('2020-06-15').setHours(24)
       let diff = releaseDate - d
       let days = diff / 86400000
       this.counter.days = parseInt(days)
@@ -47,21 +51,27 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .coming {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  background-image: url('../assets/name-plus-cycle.svg');
+  background-repeat: no-repeat;
+  background-position: center right 0;
+  background-size: 95%;
   height: 100%;
 }
-.images {
-  width: calc(100% - 70px);
-  margin-left: 70px;
-}
-.message {
+.overlay {
+  box-sizing: border-box;
   font-family: monospace;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  margin: 150px 0 0 70px;
-  text-align: left;
+  padding: 20px 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .5);
+}
+.line {
+  display: flex;
+}
+.term-init {
+  margin-right: 12px;
 }
 </style>

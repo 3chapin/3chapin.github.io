@@ -9,6 +9,7 @@ html, body {
   margin: 0;
 }
 #app {
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #15F1FF;
