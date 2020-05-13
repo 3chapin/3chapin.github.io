@@ -74,4 +74,10 @@ export default {
 .term-init {
   margin-right: 12px;
 }
+@media (max-width: 800px) {
+  .coming {
+    background-image: url('../assets/name-plus-cycle-mobile.svg');
+    background-size: 90%;
+  }
+}
 </style>
