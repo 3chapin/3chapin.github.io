@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <div class="home-banner">
-      <img src="../assets/home-header.svg" class="caption d-none d-md-block" />
-      <img src="../assets/home-header-mobile.svg" class="caption d-block d-md-none" />
+      <img src="../assets/home-header.png" class="caption d-none d-md-block" />
+      <img src="../assets/home-header-mobile.png" class="caption d-block d-md-none" />
     </div>
     <div class="profile">
       <img src="../assets/profile.png" class="profile-pic" />
-      <div>i employee user-centered design to devise clean and elementary solutions while always listening to and focusing on user needs.</div>
+      <div>i employ user-centered design to devise clean and elementary solutions while always listening to and focusing on user needs.</div>
     </div>
     <div class="work text-center">
       <div class="work-header">check out some of my work</div>

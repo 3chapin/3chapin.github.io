@@ -45,17 +45,17 @@ html, body {
   line-height: 22px;
   letter-spacing: 0.16em;
   text-transform: lowercase;
-  color: #FAFAFA;
+  color: #131313;
 }
 #app {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* color: #15F1FF; */
   width: 100vw;
+  background-color: #fafafa;
 }
 .content {
-  margin-top: 62px;
-  min-height: calc(100vh - 124px);
+  margin-top: 60px;
+  min-height: calc(100vh - 120px);
 }
 </style>

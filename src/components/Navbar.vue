@@ -42,10 +42,14 @@ export default {
 a.nav-link {
   padding: 7px 17px !important;
 }
+a.nav-link:not(.active) {
+  color: #6b6b6b;
+}
 .navbar-brand {
   font-size: 1rem;
   padding: 7px 17px;
   margin-right: 0;
+  color: #fafafa !important;
 }
 .active {
   color: #fafafa !important;
