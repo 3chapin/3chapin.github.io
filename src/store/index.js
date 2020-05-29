@@ -5,11 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    currentPage: 'home'
+  },
+  getters: {
+    currentPage: state => { return state.currentPage }
   },
   mutations: {
+    setCurrentPage (state, page) { state.currentPage = page }
   },
   actions: {
-  },
-  modules: {
+    setCurrentPage ({ commit }, page) {
+      commit('setCurrentPage', page)
+    }
   }
 })
