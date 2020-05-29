@@ -55,8 +55,8 @@ export default {
   align-items: center;
 }
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 167px;
+  height: 172px;
   margin-right: 70px;
 }
 .profile > div {
@@ -105,8 +105,10 @@ export default {
   }
   .profile-pic {
     position: absolute;
-    top: calc(512px - 60px);
-    left: calc(50% - 60px);
+    width: 116px;
+    height: 120px;
+    top: calc(512px - 62px);
+    left: calc(50% - 58px);
   }
   .work-deck {
     margin-bottom: 230px;

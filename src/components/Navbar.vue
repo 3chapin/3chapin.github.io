@@ -51,6 +51,9 @@ a.nav-link:not(.active) {
   margin-right: 0;
   color: #fafafa !important;
 }
+.navbar-brand:hover {
+  cursor: pointer;
+}
 .active {
   color: #fafafa !important;
 }
