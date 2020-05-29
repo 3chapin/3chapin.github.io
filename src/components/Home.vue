@@ -68,7 +68,7 @@ export default {
 }
 .work-deck {
   max-width: calc(100vw - 240px);
-  margin: 0 auto 246px;
+  margin: 0 auto calc((100vh - 318px) / 2);
 }
 .work-card {
   width: calc(100vw - 80px);
@@ -84,10 +84,16 @@ export default {
 @media (max-width: 1199px) {
   .work-deck {
     max-width: calc(100vw - 80px);
+    margin-bottom: calc((100vh - 632px) / 2);
   }
   .work-card {
     max-width: 295px;
     margin-bottom: 25px;
+  }
+}
+@media (max-width: 991px) {
+  .work-deck {
+    margin-bottom: 35px;
   }
 }
 @media (max-width: 767px) {
@@ -109,11 +115,6 @@ export default {
     height: 120px;
     top: calc(512px - 62px);
     left: calc(50% - 58px);
-  }
-  .work-deck {
-    margin-bottom: 230px;
-  }
-  .work-card {
   }
 }
 </style>
