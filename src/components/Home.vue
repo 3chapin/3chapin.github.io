@@ -12,16 +12,16 @@
       <div class="work-header">check out some of my work</div>
       <b-row class="work-deck">
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card">missionary assignments</div>
+          <div class="work-card" @click="changeView('msnyAssignments')">missionary assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card">service assignments</div>
+          <div class="work-card" @click="changeView('svcAssignments')">service assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card">evaluation manager</div>
+          <div class="work-card" @click="changeView('teachAssignments')">teacher assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card">more</div>
+          <div class="work-card" @click="changeView('more')">more</div>
         </b-col>
       </b-row>
     </div>
@@ -29,13 +29,23 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  methods: {
+    ...mapActions(['setWorkView', 'setCurrentPage']),
+    changeView (view) {
+      this.setWorkView(view)
+      this.setCurrentPage('work')
+    }
+  }
 }
 </script>
 
 <style scoped>
 .home-banner {
+  background-color: #000707;
   background-image: url('../assets/home-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -80,6 +90,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: #fafafa;
+  cursor: pointer;
 }
 @media (max-width: 1199px) {
   .work-deck {
@@ -107,7 +118,7 @@ export default {
   }
   .profile {
     padding: 76px 40px;
-    text-align: justify;
+    text-align: left;
   }
   .profile-pic {
     position: absolute;
