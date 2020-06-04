@@ -59,7 +59,7 @@ export default {
         let startFixedPosition = 850 - (halfHeight - halfImageHeight)
         if (window.scrollY > startFixedPosition) {
           image.style.position = 'fixed'
-          image.style.top = `${ startFixedPosition - halfImageHeight + 62 }px`
+          image.style.top = `${ halfHeight - halfImageHeight + 62 }px`
           image.style.width = `${ imageWidth }px`
         } else {
           image.style.position = 'static'
@@ -105,7 +105,6 @@ export default {
 }
 .left-side {
   padding: 150px 30px 150px 90px;
-  max-height: calc(100vh - 62px);
 }
 #image {
   width: 100%;
