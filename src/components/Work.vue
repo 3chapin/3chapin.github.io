@@ -2,7 +2,7 @@
   <div class="">
     <MsnyAssignments v-if="workView === 'msnyAssignments'"/>
     <SvcAssignments v-if="workView === 'svcAssignments'"/>
-    <TeachAssignments v-if="workView === 'TeachAssignments'"/>
+    <TeachAssignments v-if="workView === 'teachAssignments'"/>
     <More v-if="workView === 'more'"/>
   </div>
 </template>
