@@ -15,7 +15,7 @@
         </div>
         <div class="work-section">
           <div class="work-heading">problem</div>
-          <p class="work-description">There are hundreds of very data saturated rows with a small view area because of the data filters above the table. The data entry itself was clunky and not intuitive.</p>
+          <p class="work-description">There were hundreds of very data saturated rows with a small view area because of the data filters above the table. The data entry itself was clunky and not intuitive.</p>
         </div>
         <div class="work-section">
           <div class="work-heading">users</div>
@@ -23,7 +23,7 @@
         </div>
         <div class="work-section">
           <div class="work-heading">constraints</div>
-          <p class="work-description">Scope/Contraints - This was high priority - our product manager wanted a new solution ASAP.</p>
+          <p class="work-description">Since this was such a high priority - time was of the essence. We had limited discovery and research time which you sometimes have to deal with.</p>
         </div>
         <div class="work-section">
           <div class="work-heading">process</div>
@@ -33,7 +33,7 @@
           <p class="work-description">Since there were use cases for both single assignments and bulk assignments, we also implemented a modal to allow for bulk data entry.</p>
           <p class="work-description">My co-worker took the task of inserting filters into the table component - he worked up some sketches and ideas and tech reviewed with developers to talk about feasability.</p>
           <p class="work-description">I worked on the table re-design - starting with the reduction of row height - adding color bars to help distinguish between elders and sisters at a glance - adding the dropdowns in row and working with developers on feasability.</p>
-          <p class="work-description">At this point we met with the users in the Scheduling department to test our prototypes - we were able to discover some other details about their process - and we adjusted our designs to meet those needs.</p>
+          <p class="work-description">During this process we met with the users in the Scheduling department to test our prototypes - we were able to discover some other details about their process - and we adjusted our designs to meet those needs.</p>
         </div>
         <div class="work-section">
           <div class="work-heading">aftermath</div>
@@ -80,8 +80,9 @@ export default {
   background-color: #000707;
   background-image: url('../assets/msny-assignments-bg.png');
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top 26px;
   height: 700px;
   display: flex;
   justify-content: center;

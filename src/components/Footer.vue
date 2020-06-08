@@ -1,7 +1,7 @@
 <template>
   <b-navbar type="dark">
     <b-navbar-nav>
-      <b-nav-item><i class="fab fa-linkedin fa-2x"></i></b-nav-item>
+      <b-nav-item href="https://linkedin.com/in/michael-lowell" target="_blank"><i class="fab fa-linkedin fa-2x"></i></b-nav-item>
     </b-navbar-nav>
   </b-navbar>
 </template>

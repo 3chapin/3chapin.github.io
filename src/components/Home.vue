@@ -48,8 +48,9 @@ export default {
   background-color: #000707;
   background-image: url('../assets/home-bg.png');
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top 26px;
   height: 700px;
   display: flex;
   justify-content: center;
