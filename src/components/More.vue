@@ -53,7 +53,7 @@ export default {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 38px;
+  font-size: 30px;
   letter-spacing: .04em;
   text-transform: lowercase;
   color: #fafafa;
