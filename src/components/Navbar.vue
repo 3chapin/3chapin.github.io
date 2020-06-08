@@ -12,10 +12,10 @@
           :class="{ 'active': currentPage === 'work' }"
           @click="setCurrentPage('work')"
         >work</b-nav-item>
-        <b-nav-item
+        <!-- <b-nav-item
           :class="{ 'active': currentPage === 'contact' }"
           @click="setCurrentPage('contact')"
-        >contact</b-nav-item>
+        >contact</b-nav-item> -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
