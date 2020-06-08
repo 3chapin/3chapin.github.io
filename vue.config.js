@@ -1,6 +1,6 @@
 module.exports = {
   pwa: {
-    name: 'MJLowell',
+    name: 'mjlowell',
     themeColor: '#131313',
     msTileColor: '#131313',
     manifestOptions: {
