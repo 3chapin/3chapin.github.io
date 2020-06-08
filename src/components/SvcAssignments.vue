@@ -78,11 +78,11 @@ export default {
 <style scoped>
 .home-banner {
   background-color: #000707;
-  background-image: url('../assets/svc-assignments-bg.png');
+  background-image: url('../assets/svc-assignments-bg-2.png');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center top 60px;
+  background-position: center;
   height: 700px;
   display: flex;
   justify-content: center;
