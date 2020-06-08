@@ -92,6 +92,10 @@ export default {
   align-items: center;
   color: #fafafa;
   cursor: pointer;
+  transition: box-shadow .2s;
+}
+.work-card:hover {
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 1199px) {
   .work-deck {

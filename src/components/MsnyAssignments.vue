@@ -5,7 +5,7 @@
     </div>
     <div class="work-details">
       <div class="left-side">
-        <img src="@/assets/msny-assignments-example.png" class="shadow" id="image">
+        <img src="@/assets/msny-assignments-example.png" id="image">
       </div>
       <div class="right-side">
         <div class="work-section">
@@ -106,6 +106,9 @@ export default {
 }
 .left-side {
   padding: 150px 30px 150px 90px;
+}
+.left-side > img{
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 #image {
   width: 100%;
