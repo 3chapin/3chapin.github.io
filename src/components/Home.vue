@@ -114,7 +114,7 @@ export default {
 }
 @media (max-width: 767px) {
   .home-banner {
-    height: 650px;
+    height: 550px;
     background-position: center top -80px;
   }
   .home-banner > .caption {
@@ -130,7 +130,7 @@ export default {
     position: absolute;
     width: 116px;
     height: 120px;
-    top: calc(512px - 62px + 200px);
+    top: calc(512px - 62px + 100px);
     left: calc(50% - 58px);
   }
   .profile > div {
