@@ -27,19 +27,16 @@
         </div>
         <div class="work-section">
           <div class="work-heading">process</div>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
+          <p class="work-description">We met with the product manager and he filled us in on the business goals and the goals of our users. I asked a lot of clarifying questions and the vision changed slightly. It then became “create a tool according to the international MTC process” - since a committee had decided to ask the Provo MTC to align their process with the rest of the world (what an ordeal).</p>
+          <p class="work-description">My co-workers and I started brainstorming and we decided to add a “week picker” - or a way to look at a week at a time - this would allow the users to assign and to view each missionary group’s service assignment for each week.</p>
+          <p class="work-description">We also decided to remove the drop-down filter that was used to look at each day individually and insert a “day” column into the table - the table would then be sorted accordingly.</p>
+          <p class="work-description">We designed a modal to edit each group’s assignment - the modal had a field for each week the group need an assignment. This allowed for users to input each week’s assignment all at once. From our limited understanding we understood that users had all of the assignments made beforehand - this tool was to serve as the point to enter data.</p>
         </div>
         <div class="work-section">
           <div class="work-heading">aftermath</div>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
-          <p class="work-description"></p>
+          <p class="work-description">Our product manager took the lead on testing the tool with our one avaialable user - fortunately, she was pleased with the solution.</p>
+          <p class="work-description">This project was, in a lot of ways, a shot in the dark. With hardly any information about *who* we were designing for it was very difficult to know *what* to design. This is not how I like to approach things, I like to have a clear understanding of the users - their goals and processes, their pain points, their perspectives.</p>
+          <p class="work-description">I wish we could do this again properly with the ability to gather data from the users more fully. Without the proper understanding from the beginning - it will probably cost more time and money to the organization and there’s a good chance the users will be unhappy.</p>
         </div>
       </div>
     </div>

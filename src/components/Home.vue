@@ -75,7 +75,7 @@ export default {
 }
 .work-header {
   margin: 17px 0 40px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .work-deck {
   max-width: calc(100vw - 240px);
@@ -114,7 +114,8 @@ export default {
 }
 @media (max-width: 767px) {
   .home-banner {
-    height: 450px;
+    height: 650px;
+    background-position: center top -80px;
   }
   .home-banner > .caption {
     max-height: 225px;
@@ -129,8 +130,12 @@ export default {
     position: absolute;
     width: 116px;
     height: 120px;
-    top: calc(512px - 62px);
+    top: calc(512px - 62px + 200px);
     left: calc(50% - 58px);
+  }
+  .profile > div {
+    margin-top: 30px;
+    letter-spacing: .13em;
   }
 }
 </style>
