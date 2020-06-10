@@ -115,6 +115,7 @@ export default {
 @media (max-width: 767px) {
   .home-banner {
     height: 550px;
+    background-attachment: scroll;
     background-position: center top -80px;
   }
   .home-banner > .caption {

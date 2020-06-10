@@ -138,6 +138,7 @@ export default {
 @media (max-width: 767px) {
   .home-banner {
     height: 450px;
+    background-attachment: scroll;
   }
   .home-banner > div {
     margin-left: 20px;
