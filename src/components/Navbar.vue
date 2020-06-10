@@ -10,7 +10,7 @@
         >home</b-nav-item>
         <b-nav-item
           :class="{ 'active': currentPage === 'work' }"
-          @click="setCurrentPage('work')"
+          @click="setPageAndWorkView()"
         >work</b-nav-item>
         <!-- <b-nav-item
           :class="{ 'active': currentPage === 'contact' }"
@@ -29,7 +29,11 @@ export default {
     ...mapGetters(['currentPage'])
   },
   methods: {
-    ...mapActions(['setCurrentPage'])
+    ...mapActions(['setCurrentPage', 'setWorkView']),
+    setPageAndWorkView () {
+      this.setCurrentPage('work')
+      this.setWorkView('msnyAssignments')
+    }
   }
 }
 </script>
@@ -44,6 +48,9 @@ a.nav-link {
 }
 a.nav-link:not(.active) {
   color: #6b6b6b;
+}
+.navbar-dark .navbar-nav .active > .nav-link {
+  color: #fafafa !important;
 }
 .navbar-brand {
   font-size: 1rem;

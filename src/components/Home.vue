@@ -48,7 +48,6 @@ export default {
   background-color: #000707;
   background-image: url('../assets/home-bg-2.png');
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   height: 700px;
@@ -115,7 +114,6 @@ export default {
 @media (max-width: 767px) {
   .home-banner {
     height: 550px;
-    background-attachment: scroll;
     background-position: center top -80px;
   }
   .home-banner > .caption {
