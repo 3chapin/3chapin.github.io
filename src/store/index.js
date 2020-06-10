@@ -23,6 +23,7 @@ export default new Vuex.Store({
       commit('setCurrentPage', page)
     },
     setWorkView ({ commit }, view) {
+      window.scrollTo(0,0)
       commit('setWorkView', view)
     }
   }
