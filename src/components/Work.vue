@@ -52,6 +52,7 @@ export default {
 .work-details {
   display: flex;
   margin-top: 50px;
+  margin-bottom: -50px;
 }
 .left-side, .right-side {
   flex: 1;
