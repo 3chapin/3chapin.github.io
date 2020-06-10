@@ -69,7 +69,6 @@ export default {
 }
 .right-side {
   padding: 0 90px 0 30px;
-  margin-top: -15px;
 }
 .work-section {
   margin-bottom: 90px;
