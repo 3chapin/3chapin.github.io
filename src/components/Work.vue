@@ -28,16 +28,6 @@ export default {
 </script>
 
 <style>
-.home-banner {
-  background-color: #000707;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .home-banner > div {
   margin-bottom: 115px;
   font-family: 'Open Sans', sans-serif;
@@ -51,7 +41,7 @@ export default {
 }
 .work-details {
   display: flex;
-  margin-top: 50px;
+  padding-top: 50px;
   margin-bottom: -50px;
 }
 .left-side, .right-side {
@@ -93,10 +83,6 @@ export default {
   text-align: justify;
 }
 @media (max-width: 767px) {
-  .home-banner {
-    height: 450px;
-    margin-bottom: 90px;
-  }
   .home-banner > div {
     margin-left: 20px;
   }

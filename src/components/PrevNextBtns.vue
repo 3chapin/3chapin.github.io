@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-container">
+  <div class="static btn-container">
     <b-button variant="link" class="prevBtn topBtn text-decoration-none" @click="changeWorkView(-1)" :disabled="workView === 'msnyAssignments'">Previous</b-button>
     <b-button variant="link" class="nextBtn topBtn text-decoration-none" @click="changeWorkView(1)" :disabled="workView === 'more'">Next</b-button>
   </div>

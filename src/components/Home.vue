@@ -4,11 +4,11 @@
       <img src="../assets/home-header.png" class="caption d-none d-md-block" />
       <img src="../assets/home-header-mobile.png" class="caption d-block d-md-none" />
     </div>
-    <div class="profile">
+    <div class="static profile">
       <img src="../assets/profile.png" class="profile-pic" />
       <div>i employ user-centered design to devise clean and elementary solutions while always listening to and focusing on user needs.</div>
     </div>
-    <div class="work text-center">
+    <div class="static work text-center">
       <div class="work-header">check out some of my work</div>
       <b-row class="work-deck">
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
@@ -44,16 +44,8 @@ export default {
 </script>
 
 <style scoped>
-.home-banner {
-  background-color: #000707;
+.home-banner::after {
   background-image: url('../assets/home-bg-2.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .home-banner > .caption {
   width: 88%;
@@ -113,7 +105,6 @@ export default {
 }
 @media (max-width: 767px) {
   .home-banner {
-    height: 550px;
     background-position: center top -80px;
   }
   .home-banner > .caption {
@@ -126,10 +117,10 @@ export default {
     text-align: left;
   }
   .profile-pic {
-    position: absolute;
+    position: fixed;
     width: 116px;
     height: 120px;
-    top: calc(512px - 62px + 100px);
+    top: calc(445px - 62px + 100px);
     left: calc(50% - 58px);
   }
   .profile > div {

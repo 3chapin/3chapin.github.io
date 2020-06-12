@@ -1,11 +1,11 @@
 <template>
-  <div class="">
+  <div class="home">
     <div class="home-banner">
       <div>Missionary Assignments</div>
     </div>
     <PrevNextBtns/>
-    <div class="work-details">
-      <div class="left-side">
+    <div class="static work-details">
+      <div class="static left-side">
         <img src="@/assets/msny-assignments-example.png" id="image">
       </div>
       <div class="right-side">
@@ -53,13 +53,13 @@ export default {
   mounted () {
     let image = document.querySelector('#image')
     window.addEventListener('scroll', () => {
-      let width = window.innerWidth
+      let width = document.getElementById('app').innerWidth
       let imageWidth = (width / 2) - 120
-      let halfHeight = (window.innerHeight - 62) / 2
+      let halfHeight = (document.getElementById('app').innerHeight - 62) / 2
       let halfImageHeight = (imageWidth * .638) / 2
       if (width > 767) {
         let startFixedPosition = 850 - (halfHeight - halfImageHeight)
-        if (window.scrollY > startFixedPosition) {
+        if (document.getElementById('app').scrollY > startFixedPosition) {
           image.style.position = 'fixed'
           image.style.top = `${ halfHeight - halfImageHeight + 31}px`
           image.style.width = `${ imageWidth }px`
@@ -78,7 +78,12 @@ export default {
 </script>
 
 <style scoped>
-.home-banner {
+.home-banner::after {
   background-image: url('../assets/msny-assignments-bg-2.png');
+}
+@media (max-width: 767px) {
+  .home-banner {
+    /* margin-bottom: 90px; */
+  }
 }
 </style>

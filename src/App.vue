@@ -58,4 +58,40 @@ html, body {
   margin-top: 60px;
   min-height: calc(100vh - 120px);
 }
+.home {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+.home-banner {
+  position: relative;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-banner::after {
+  content: ' ';
+  position: absolute;
+  height: calc(700px);
+  top: -70px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
+}
+.static {
+  position: relative;
+  background-color: #fafafa;
+}
+@media (max-width: 767px) {
+  .home-banner {
+    height: 550px;
+  }
+}
 </style>

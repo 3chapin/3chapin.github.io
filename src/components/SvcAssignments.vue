@@ -1,10 +1,10 @@
 <template>
-  <div class="">
+  <div class="home">
     <div class="home-banner">
       <div>Service Assignments</div>
     </div>
     <PrevNextBtns/>
-    <div class="work-details">
+    <div class="static work-details">
       <div class="left-side">
         <img src="@/assets/svc-assignments-example.png" id="image">
       </div>
@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style scoped>
-.home-banner {
+.home-banner::after {
   background-image: url('../assets/svc-assignments-bg-2.png');
 }
 </style>
