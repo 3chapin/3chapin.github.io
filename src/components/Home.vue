@@ -18,10 +18,10 @@
           <div class="work-card" @click="changeView('svcAssignments')">service assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card" @click="changeView('teachAssignments')">teacher assignments</div>
+          <div class="work-card-inactive">teacher assignments<br>(under development)</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card" @click="changeView('more')">more</div>
+          <div class="work-card-inactive">more<br>(under development)</div>
         </b-col>
       </b-row>
     </div>
@@ -84,6 +84,17 @@ export default {
   color: #fafafa;
   cursor: pointer;
   transition: box-shadow .2s;
+}
+.work-card-inactive {
+  width: calc(100vw - 80px);
+  max-width: 270px;
+  border-radius: 16px;
+  background-color: #131313;
+  height: 234px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b6b6b;
 }
 .work-card:hover {
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
