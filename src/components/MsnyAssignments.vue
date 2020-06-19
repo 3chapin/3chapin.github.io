@@ -45,6 +45,7 @@
       </div>
     </div>
     <PrevNextBtns/>
+    <Footer />
   </div>
 </template>
 

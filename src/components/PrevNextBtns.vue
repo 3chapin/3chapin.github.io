@@ -1,22 +1,23 @@
 <template>
   <div class="static btn-container">
-    <b-button variant="link" class="prevBtn topBtn text-decoration-none" @click="changeWorkView(-1)" :disabled="workView === 'msnyAssignments'">Previous</b-button>
-    <b-button variant="link" class="nextBtn topBtn text-decoration-none" @click="changeWorkView(1)" :disabled="workView === 'svcAssignments'">Next</b-button>
+    <b-button variant="link" class="prevBtn topBtn text-decoration-none" @click="changeCurrentPage(-1)" :disabled="currentPage === 'msnyAssignments'">Previous</b-button>
+    <b-button variant="link" class="nextBtn topBtn text-decoration-none" @click="changeCurrentPage(1)" :disabled="currentPage === 'more'">Next</b-button>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters(['workView'])
+    ...mapState(['currentPage'])
   },
   methods: {
-    changeWorkView (n) {
+    ...mapActions(['setCurrentPage']),
+    changeCurrentPage (n) {
       const viewArray = ['msnyAssignments', 'svcAssignments', 'teachAssignments', 'more']
-      let current = viewArray.indexOf(this.workView)
-      this.$store.dispatch('setWorkView', viewArray[current + n])
+      let current = viewArray.indexOf(this.currentPage)
+      this.setCurrentPage(viewArray[current + n])
     }
   }
 }

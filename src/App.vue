@@ -3,30 +3,18 @@
     <Navbar/>
     <div class="content">
       <Home v-if="currentPage === 'home'"/>
-      <Work v-if="currentPage === 'work'"/>
+      <MsnyAssignments v-if="currentPage === 'msnyAssignments'" />
+      <SvcAssignments v-if="currentPage === 'svcAssignments'" />
+      <TeachAssignments v-if="currentPage === 'teachAssignments'" />
       <Contact v-if="currentPage === 'contact'"/>
     </div>
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import Home from '@/components/Home'
-import Work from '@/components/Work'
-import Contact from '@/components/Contact'
-
 import { mapGetters } from 'vuex'
 
 export default {
-  components: {
-    Navbar,
-    Footer,
-    Home,
-    Work,
-    Contact
-  },
   computed: {
     ...mapGetters(['currentPage'])
   }
@@ -55,11 +43,11 @@ html, body {
   background-color: #fafafa;
 }
 .content {
-  margin-top: 60px;
-  min-height: calc(100vh - 120px);
+  padding-top: 60px;
+  height: 100vh;
 }
 .home {
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 2px;
@@ -89,9 +77,82 @@ html, body {
   position: relative;
   background-color: #fafafa;
 }
+.home-banner > div {
+  margin-bottom: 115px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 80px;
+  letter-spacing: .08em;
+  text-transform: lowercase;
+  color: #fafafa;
+}
+.work-details {
+  display: flex;
+  padding-top: 50px;
+  margin-bottom: -50px;
+}
+.left-side, .right-side {
+  flex: 1;
+}
+.left-side {
+  padding: 0 30px 0 90px;
+}
+.left-side > img{
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+#image {
+  width: 100%;
+  border-radius: 4px;
+}
+.right-side {
+  padding: 0 90px 0 30px;
+}
+.work-section {
+  margin-bottom: 90px;
+}
+.work-heading {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+}
+.work-description {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: .06em;
+  text-transform: none;
+  margin-bottom: 30px;
+  text-align: justify;
+}
 @media (max-width: 767px) {
   .home-banner {
     height: 550px;
+  }
+  .home-banner > div {
+    margin-left: 20px;
+  }
+  .left-side {
+    flex: 0;
+    padding: 0;
+  }
+  .work-description {
+    text-align: left;
+  }
+  #image {
+    position: absolute;
+    top: calc(510px - ((100vw - 60px) * .638) / 2);
+    left: 30px;
+    width: calc(100vw - 60px);
+  }
+  .right-side {
+    padding: 10px 30px;
   }
 }
 </style>

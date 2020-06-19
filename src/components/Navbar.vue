@@ -9,13 +9,9 @@
           @click="setCurrentPage('home')"
         >home</b-nav-item>
         <b-nav-item
-          :class="{ 'active': currentPage === 'work' }"
-          @click="setPageAndWorkView()"
+          :class="{ 'active': currentPage === 'msnyAssignments' }"
+          @click="setCurrentPage('msnyAssignments')"
         >work</b-nav-item>
-        <!-- <b-nav-item
-          :class="{ 'active': currentPage === 'contact' }"
-          @click="setCurrentPage('contact')"
-        >contact</b-nav-item> -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -29,11 +25,7 @@ export default {
     ...mapGetters(['currentPage'])
   },
   methods: {
-    ...mapActions(['setCurrentPage', 'setWorkView']),
-    setPageAndWorkView () {
-      this.setCurrentPage('work')
-      this.setWorkView('msnyAssignments')
-    }
+    ...mapActions(['setCurrentPage'])
   }
 }
 </script>

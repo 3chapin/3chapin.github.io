@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="home-banner">
-      <img src="../assets/home-header.png" class="caption d-none d-md-block" />
-      <img src="../assets/home-header-mobile.png" class="caption d-block d-md-none" />
+      <img src="../assets/home-header.png" class="d-none d-md-block" />
+      <img src="../assets/home-header-mobile.png" class="d-block d-md-none" />
     </div>
     <div class="static profile">
       <img src="../assets/profile.png" class="profile-pic" />
@@ -12,19 +12,20 @@
       <div class="work-header">check out some of my work</div>
       <b-row class="work-deck">
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card" @click="changeView('msnyAssignments')">missionary assignments</div>
+          <div class="work-card" @click="setCurrentPage('msnyAssignments')">missionary assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card" @click="changeView('svcAssignments')">service assignments</div>
+          <div class="work-card" @click="setCurrentPage('svcAssignments')">service assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card-inactive">teacher assignments<br>(under development)</div>
+          <div class="work-card inactive">teacher assignments<br>(under development)</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card-inactive">more<br>(under development)</div>
+          <div class="work-card inactive">more<br>(under development)</div>
         </b-col>
       </b-row>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -34,11 +35,7 @@ import { mapActions } from 'vuex'
 export default {
   name: 'Home',
   methods: {
-    ...mapActions(['setWorkView', 'setCurrentPage']),
-    changeView (view) {
-      this.setWorkView(view)
-      this.setCurrentPage('work')
-    }
+    ...mapActions(['setCurrentPage'])
   }
 }
 </script>
@@ -47,14 +44,14 @@ export default {
 .home-banner::after {
   background-image: url('../assets/home-bg-2.png');
 }
-.home-banner > .caption {
+.home-banner > img {
   width: 88%;
 }
 .profile {
   padding: 170px 90px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: left;
 }
 .profile-pic {
   width: 167px;
@@ -65,7 +62,7 @@ export default {
   line-height: 40px;
 }
 .work-header {
-  margin: 17px 0 40px;
+  padding: 17px 0 40px;
   font-size: 16px;
 }
 .work-deck {
@@ -85,15 +82,7 @@ export default {
   cursor: pointer;
   transition: box-shadow .2s;
 }
-.work-card-inactive {
-  width: calc(100vw - 80px);
-  max-width: 270px;
-  border-radius: 16px;
-  background-color: #131313;
-  height: 234px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.work-card.inactive {
   color: #6b6b6b;
 }
 .work-card:hover {
@@ -115,7 +104,7 @@ export default {
   }
 }
 @media (max-width: 767px) {
-  .home-banner {
+  .home-banner::after {
     background-position: center top -80px;
   }
   .home-banner > .caption {

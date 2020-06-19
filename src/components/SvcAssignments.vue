@@ -58,7 +58,7 @@ export default {
         let startFixedPosition = 850 - (halfHeight - halfImageHeight)
         if (window.scrollY > startFixedPosition) {
           image.style.position = 'fixed'
-          image.style.top = `${ halfHeight - halfImageHeight + 62 }px`
+          image.style.top = `${ halfHeight - halfImageHeight + 31 }px`
           image.style.width = `${ imageWidth }px`
         } else {
           image.style.position = 'static'
