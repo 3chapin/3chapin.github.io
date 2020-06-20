@@ -63,7 +63,7 @@ html, body {
   content: ' ';
   position: absolute;
   height: calc(700px);
-  top: -82px;
+  top: -85px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -141,6 +141,9 @@ html, body {
   }
   .home-banner > div {
     margin-left: 20px;
+  }
+  .home-banner::after {
+    top: -82px;
   }
   .left-side {
     flex: 0;
