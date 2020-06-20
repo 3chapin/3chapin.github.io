@@ -60,6 +60,8 @@ export default {
 }
 .profile > div {
   line-height: 40px;
+  display: flex;
+  align-items: center;
 }
 .work-header {
   padding: 17px 0 40px;
@@ -120,12 +122,13 @@ export default {
     position: fixed;
     width: 116px;
     height: 120px;
-    top: calc(445px - 62px + 100px);
+    top: calc(550px - 60px);
     left: calc(50% - 58px);
   }
   .profile > div {
     margin-top: 30px;
     letter-spacing: .13em;
+    text-align: justify;
   }
 }
 </style>
