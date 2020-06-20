@@ -1,7 +1,7 @@
 <template>
   <div class="static btn-container">
     <b-button variant="link" class="prevBtn topBtn text-decoration-none" @click="changeCurrentPage(-1)" :disabled="currentPage === 'msnyAssignments'">Previous</b-button>
-    <b-button variant="link" class="nextBtn topBtn text-decoration-none" @click="changeCurrentPage(1)" :disabled="currentPage === 'more'">Next</b-button>
+    <b-button variant="link" class="nextBtn topBtn text-decoration-none" @click="changeCurrentPage(1)" :disabled="currentPage === 'svcAssignments'">Next</b-button>
   </div>
 </template>
 

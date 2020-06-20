@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+  <div class="home" id="home">
     <div class="home-banner">
       <div>Service Assignments</div>
     </div>
+    <div class="before-prev-next"></div>
     <PrevNextBtns/>
     <div class="static work-details">
       <div class="left-side">
@@ -42,32 +43,44 @@
       </div>
     </div>
     <PrevNextBtns/>
+    <Footer />
   </div>
 </template>
 
 <script>
 export default {
   mounted () {
+    let footer = document.getElementById('footer')
+    let home = document.getElementById('home')
     let image = document.querySelector('#image')
-    window.addEventListener('scroll', () => {
-      let width = window.innerWidth
-      let imageWidth = (width / 2) - 120
-      let halfHeight = (window.innerHeight - 62) / 2
-      let halfImageHeight = (imageWidth * .638) / 2
-      if (width > 767) {
-        let startFixedPosition = 850 - (halfHeight - halfImageHeight)
-        if (window.scrollY > startFixedPosition) {
-          image.style.position = 'fixed'
-          image.style.top = `${ halfHeight - halfImageHeight + 31 }px`
-          image.style.width = `${ imageWidth }px`
-        } else {
-          image.style.position = 'static'
-          image.style.width = `${ imageWidth }px`
-        }
+    let imageInitialTopPosition = image.getBoundingClientRect().top
+
+    home.addEventListener('scroll', () => {
+      if (home.clientWidth < 767) {
+        let imageWidth = (home.clientWidth / 2) - 60
+        let imageHeight = imageWidth * .638
+        image.style.position = 'fixed'
+        image.style.top = `${ 550 - (imageHeight / 2) - 62 }px`
+        image.style.left = `30px`
       } else {
-        image.style.position = 'absolute'
-        image.style.top = `${ 510 - ((width - 60) * .638) / 2 }px`
-        image.style.width = `${ width - 60 }px`
+        let imageWidth = (home.clientWidth / 2) - 120
+        let imageHeight = imageWidth * .638
+        let yTopScrollPosition = home.scrollTop
+        let footerPosition = footer.getBoundingClientRect().top + yTopScrollPosition - 62
+        let clientHeight = home.clientHeight
+        let displayHeight = () => {
+          if (yTopScrollPosition + clientHeight > footerPosition) { return clientHeight - (yTopScrollPosition + clientHeight - footerPosition) }
+          else { return clientHeight }
+        }
+        let lineOfDemarcation = imageInitialTopPosition + (imageHeight / 2) - (displayHeight() / 2)
+        let diff = (yTopScrollPosition + 62) - lineOfDemarcation
+        if (diff < 0) {
+          image.style.position = 'static'
+        } else {
+          image.style.position = 'absolute'
+          image.style.top = `${ diff + 62 }px`
+          image.style.left = `90px`
+        }
       }
     })
   }

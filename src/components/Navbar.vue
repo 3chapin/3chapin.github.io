@@ -9,7 +9,7 @@
           @click="setCurrentPage('home')"
         >home</b-nav-item>
         <b-nav-item
-          :class="{ 'active': currentPage === 'msnyAssignments' }"
+          :class="{ 'active': currentPage === 'msnyAssignments' || currentPage === 'svcAssignments' || currentPage === 'teachAssignments' || currentPage === 'more' }"
           @click="setCurrentPage('msnyAssignments')"
         >work</b-nav-item>
       </b-navbar-nav>

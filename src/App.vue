@@ -49,7 +49,7 @@ html, body {
 .home {
   height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   perspective: 2px;
 }
 .home-banner {
@@ -63,7 +63,7 @@ html, body {
   content: ' ';
   position: absolute;
   height: calc(700px);
-  top: -70px;
+  top: -82px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -103,7 +103,7 @@ html, body {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 #image {
-  width: 100%;
+  width: calc(100vw / 2 - 120px);
   border-radius: 4px;
 }
 .right-side {
@@ -131,6 +131,10 @@ html, body {
   margin-bottom: 30px;
   text-align: justify;
 }
+.before-prev-next {
+  height: 0;
+  background-color: #fafafa;
+}
 @media (max-width: 767px) {
   .home-banner {
     height: 550px;
@@ -146,13 +150,16 @@ html, body {
     text-align: left;
   }
   #image {
-    position: absolute;
-    top: calc(510px - ((100vw - 60px) * .638) / 2);
+    position: fixed;
+    top: calc(550px - ((100vw - 60px) * .638) / 2);
     left: 30px;
     width: calc(100vw - 60px);
   }
   .right-side {
     padding: 10px 30px;
+  }
+  .before-prev-next {
+    height: 100px;
   }
 }
 </style>
