@@ -12,10 +12,10 @@
       <div class="work-header">check out some of my work</div>
       <b-row class="work-deck">
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card" @click="setCurrentPage('msnyAssignments')">missionary assignments</div>
+          <div class="work-card" @click="setCurrentPage('msnyAssignments')">missionary<br>assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
-          <div class="work-card" @click="setCurrentPage('svcAssignments')">service assignments</div>
+          <div class="work-card" @click="setCurrentPage('svcAssignments')">service<br>assignments</div>
         </b-col>
         <b-col cols="12" lg="6" xl="3" class="d-flex justify-content-center align-items-center">
           <div class="work-card inactive">teacher assignments<br>(under development)</div>
@@ -80,6 +80,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 30px;
   color: #fafafa;
   cursor: pointer;
   transition: box-shadow .2s;
