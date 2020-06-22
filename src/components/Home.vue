@@ -80,7 +80,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 30px;
+  line-height: 26px;
   color: #fafafa;
   cursor: pointer;
   transition: box-shadow .2s;
